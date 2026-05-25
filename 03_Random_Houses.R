@@ -33,3 +33,7 @@ for (i in seq_len(nrow(bonne_sante_info))) {
 set.seed(11042004)
 
 list_in_order <- sample(housing_options, size = 1000, replace = FALSE)
+
+# Kevin used 1:85
+
+calvin_list_in_order <- list_in_order[86:length(list_in_order)]
