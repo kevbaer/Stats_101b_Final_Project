@@ -7,15 +7,15 @@ editor: visual
 
 Hook:
 
-When I (Kevin), was young, I played in a quite a few highly competitive youth chess tournaments. By the time I got into high school, it was fairly for my competitors to be gulping down a pill prior to competition. But I never really understood what it was or why it might be helping them until I caught a glimpse of the label: "[Caffeine pill](https://www.amazon.com/Nutricost-Caffeine-Pills-Serving-Capsules/dp/B01MY5CW7S?th=1)" 100 mg. It seems like everyone else just thought that taking these pills would help with their attention and performance. Now, we can see whether an advantage is truly prescribed, by testing this on the islanders.
+When I (Kevin), was young, I played in a quite a few competitive youth chess tournaments. By the time I got into high school, it was fairly common for my competitors to be gulping down a pill prior to competition. But I never really understood what it was or why it might be helping them until I caught a glimpse of the label: [Caffeine pill](https://www.amazon.com/Nutricost-Caffeine-Pills-Serving-Capsules/dp/B01MY5CW7S?th=1) 100 mg. It seems like everyone else just thought that taking these pills would help with their attention and performance. Now, we can see whether an advantage is truly prescribed, by testing this on the islanders.
 
-Possible Supplements:
+Research Question:
+
+-   Does taking a caffeine 60 minutes before playing chess change the performance of 21-29 year olds on the island of Bonne Sante (one of the virtual class islands)?
+
+Supplement:
 
 -   Caffeine Tablet (100mg) (1 dose)
-
--   Methamphetamine (10mg)
-
--   MDMA (50mg)
 
 Study design:
 
@@ -23,17 +23,15 @@ Study design:
 
 -   Paired study:
 
-    -   n games played back-to-back (alternating colors, starting with white)
+    -   6 games played back-to-back (alternating colors, starting with white)
 
-    -   Separately, days later, n games played back-to-back (alternating colors, starting with white)
+    -   Separately, days later, 6 games played back-to-back (alternating colors, starting with white)
 
     -   50% will take a caffeine tablet, 1 hour before the games on day 1, and the other 50% will take on day 2. (Randomly assigned)
 
--   Should we narrow location down to a specific island (and then we can poll for town, house number pairings)
+-   Island of Bonne Sante, all cities and houses represented
 
-Response variables:
-
--   Blood Adrenaline (pg/ml)
+Response:
 
 -   Play chess white/black (win pct, draws count for 0.5)
 
@@ -62,3 +60,5 @@ Papers to discuss / compare with:
 -   [Link 4](https://pmc.ncbi.nlm.nih.gov/articles/PMC5978818/pdf/12152_2018_Article_9354.pdf)
 
 -   [Link 5](https://pdf.sciencedirectassets.com/271877/1-s2.0-S1364661310X00122/1-s2.0-S1364661310002482/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJIMEYCIQCY9C09Ak3YxTEYvZdb%2BpSov6hjJqf%2FotRM5AUVhv512QIhALrH0PFowCEprnfPMRJerApkpq%2F1%2B5%2FRMUTgniN5y9BtKrMFCC0QBRoMMDU5MDAzNTQ2ODY1Igx7mQOM8ZhWSfeq6iIqkAUv%2FHrb%2FtScFe9IlVW%2F4iUXtNz3zUha9yBIJliQFhda4pxij6C81eVpSR6kGMr2Z5KlZCvVFjbos%2BAw9XSZvZ4OnEyJAe%2B360EKlkFmw5CvxLJhY1NTeBpyU3qLXyJ1XHXcNVxWvEj8PP4bm1LHxL06wSRkVihuFk2%2BjgFa2fh7EuiJGPiMu5EYpwj%2FmjRYbNJOyFmyaeB1oG7V8Ptui7yrq8y386HA5FYn4GKaMy%2BsKUnYI32eScLbYFn3PaxZ4Ld0JpzcZJ%2B6%2FjVjqXFjmkVWhtyBil3ZFpuFVXpG2coxqNIIZQHRGemDtMThpTdf6tFJhIAQM5Z8IepBR36Mxdd61wwz5YXHcV5uUm15hDXpDOXvLQuS%2BVSNzyG%2FDRQcsBQPAo%2B%2FS2Y9d1WTHM%2FLkjtHedEb1yl0q%2FRIRHiCNebjFTXtGGrClubDztXLS6WXFOjyLaaGSliZC30%2BUMEA5oGTbKMjnGIE1Zsqoz5tisaD7%2BqanlCJ%2BHeU2xfhFCFCBUihJR5RwN9aXg%2FTxHIiZN2G1TAYSvNuELa7okNIv1JmrmmXY%2F2yYA8ClCEt5ahaMPxAlTekPVvkicLPYCYbXseKXTI9qe2yXgyjSs0bUR0cprBU4oNTBSIX9BeWKfxMa%2FRyCidtGwLaslwWOfXwP0cziOcK2vOkaLe1UVRquTshnn0burcUm%2B5fzzJyxeBfV%2FgQ%2BZgL9A3h%2Bz5X9fh9XpVs559%2B8dmfC%2BPBYi65nPZjzCfg4nmFREJ%2BZ6nYejBiMhvFWK1HJhmHpCpfuY7HztDGzhhXH2YFejGEhlEVppN21cdqlz4Gk64SXhbQN1i7Omo3Ajxwj4qDAX0eO4m6k%2FcG3N3qdu2DeAZFyjw3lxFF%2BjC5xcTQBjqwAQF1bteejiAzmr8Zky3iYXXlADrOrJ82OkLRiOvHUg%2BPj4FHFpKqx67Q84%2BkSOy%2Fs9hPbTcw0inP62yDANvorlAaRNP%2Blwit2RWMDxDDOpaCnWMwUZSuG9zm3eKbIFDH3c9y6HjRYpO98fYcQHlq8MvMM9GFLCcBgjm1sDxonEdEyhih1St4hAu%2BNc2U7JQL1HTkUhx1D6lwD5CRyjjtZO31v8eWqEfxbCzWPQSI754T&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260523T044930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXWLVP3RF%2F20260523%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=624c2aa3196794a4f50735d15967921dbd96bd3a0bba213446f562bd4673898b&hash=6890fbc8e245525b48faf0a66d122a60898685c047bdd7ca503cca059ca77ec9&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1364661310002482&tid=spdf-ce6b8938-d851-492a-a243-a7beef5af36e&sid=07c4251e6badc64fac9bfad968d7775eda13gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f150e5355505908545d52&rr=a0016f325d49cb83&cc=us)
+
+There is one main study that is cited when you google "Caffeine table effect on chess" (link 1). However, this was back in 2017 and had surprising findings, so I think another study is exciting (and besides it's the island so anything can happen!). Links 2 and 3 are about other types of cognitive performance-enhancing drugs (the more general category). Links 4 and 5 are more thoughtful about the insights and consequences of this category of research and advances in this field.
