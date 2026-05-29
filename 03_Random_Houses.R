@@ -38,4 +38,4 @@ list_in_order <- sample(housing_options, size = 1000, replace = FALSE)
 
 calvin_list_in_order <- list_in_order[86:length(list_in_order)]
 
-# Calvin used 86:95
+# Calvin used 86:180
