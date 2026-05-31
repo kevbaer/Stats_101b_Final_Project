@@ -11,11 +11,15 @@ When I (Kevin), was young, I played in a quite a few competitive youth chess tou
 
 Research Question:
 
--   Does taking a caffeine 60 minutes before playing chess change the performance of 21-29 year olds on the island of Bonne Sante (one of the virtual class islands)?
+-   How do caffeine dosage and gender influence chess performance among 21-29 year olds on Bonne Sante (one of the virtual class islands)?
 
 Supplement:
 
+-   Control (no dose)
 -   Caffeine Tablet (100mg) (1 dose)
+-   Caffeine Tablet (100mg) (2 doses)
+-   Methamphetamine Tablet (1 dose)
+
 
 Study design:
 
