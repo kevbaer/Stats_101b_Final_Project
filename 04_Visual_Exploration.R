@@ -131,3 +131,10 @@ Interaction_Plot <- dat_long |>
 
 aov(SCORE ~ TREATMENT + SEX + Error(NAME), data = dat_long) |>
   summary()
+
+# Residuals Plots 
+reg_model <- lm(SCORE ~ TREATMENT + SEX + NAME, data = dat_long)
+
+par(mfrow = c(2, 2))
+plot(reg_model)
+
