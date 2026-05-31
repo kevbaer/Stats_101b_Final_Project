@@ -33,7 +33,6 @@ add_clean_treatment <- function(X) {
 raw_file <- read_sheet("1ZgRN1rhLDxdqz7HC7zoD6mphQ61XnV881gx_QjguWys")
 
 dat <- raw_file |>
-  filter(COLLECTOR == "Kevin") |>
   select(NAME, SEX, starts_with("TOTAL_"))
 
 dat_long <- dat |>
@@ -130,5 +129,5 @@ Interaction_Plot <- dat_long |>
 
 # For Later ---------------------------------------------------------------
 
-aov(SCORE ~ DRUG + SEX + Error(NAME), data = dat_long) |>
+aov(SCORE ~ TREATMENT + SEX + Error(NAME), data = dat_long) |>
   summary()
