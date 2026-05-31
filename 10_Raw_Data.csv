@@ -1,0 +1,35 @@
+COLLECTOR,ISLAND,CITY,HOUSE_NUMBER,NAME,SEX,AGE,GAME_1_CLEAN,GAME_2_CLEAN,GAME_3_CLEAN,GAME_4_CLEAN,GAME_5_CLEAN,GAME_6_CLEAN,TOTAL_SCORE_CLEAN,GAME_1_TABLET,GAME_2_TABLET,GAME_3_TABLET,GAME_4_TABLET,GAME_5_TABLET,GAME_6_TABLET,TOTAL_SCORE_TABLET,GAME_1_DOUBLE,GAME_2_DOUBLE,GAME_3_DOUBLE,GAME_4_DOUBLE,GAME_5_DOUBLE,GAME_6_DOUBLE,TOTAL_SCORE_DOUBLE,GAME_1_METH,GAME_2_METH,GAME_3_METH,GAME_4_METH,GAME_5_METH,GAME_6_METH,TOTAL_SCORE_METH
+Calvin,Bonne Sante,Colmar,2095,Tomas Jensen,M,25,1,0,1,0,1,1,4,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Colmar,960,Aaron Burke,M,26,1,1,0,1,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,0,1,1,5
+Calvin,Bonne Sante,Maeva,232,Celine Kimura,F,22,1,0,1,0,1,0,3,1,0,1,0,1,0,3,1,1,1,1,0,1,5,1,1,1,1,1,0,5
+Calvin,Bonne Sante,Maeva,400,Fay Regan,F,27,0,1,0,0,1,0,2,0,0,0,0,1,0,1,1,0,1,1,1,0,4,0,1,0,0,0,0,1
+Calvin,Bonne Sante,Mahuti,1250,Kamal Tamboli,M,24,1,0,1,0,1,0,3,1,1,0,1,1,1,5,0,0,1,1,0,1,3,0,1,1,1,1,1,5
+Calvin,Bonne Sante,Colmar,2033,Bhajan Tiwari,M,28,1,1,1,1,1,1,6,1,1,1,0,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Mahuti,1122,Patrice Dayal,F,27,1,1,1,0,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,0,1,1,1,1,5
+Calvin,Bonne Sante,Colmar,1568,Tahlia Suzuki,F,29,1,1,1,0,1,1,5,1,1,1,0,1,1,5,1,1,1,1,1,1,6,1,1,1,0,1,1,5
+Calvin,Bonne Sante,Mahuti,555,Taahira Maharaj,F,26,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Colmar,1498,Dr Aahna Devar,F,23,1,0,1,0,1,1,4,1,1,1,0,1,0,4,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Mahuti,167,Dr Gana Devar,F,26,1,0,1,1,1,1,5,1,1,1,1,1,0,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Nidoma,514,Nathan Simon,M,24,0,0,1,1,1,1,4,1,1,1,0,1,1,5,1,1,1,1,1,0,5,0,0,0,1,1,0,2
+Calvin,Bonne Sante,Riroua,377,Gustave Rao,M,29,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,0,1,1,5
+Calvin,Bonne Sante,Colmar,2211,Mohal Ramanan,M,26,1,0,1,1,1,1,5,1,0,1,1,1,0,4,1,0,1,1,1,0,4,1,0,0,0,1,1,3
+Calvin,Bonne Sante,Mahuti,1212,Yvette Delacroix,F,23,1,1,1,0,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Valais,292,Vivienne Bruce,F,28,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,0,1,1,0,1,4,1,1,1,1,1,1,6
+Calvin,Bonne Sante,Riroua,79,Teala Sultana ,F,27,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Colmar,1732,Anais Joubert,F,26,1,0,1,1,1,0,4,1,0,1,1,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Colmar,954,Brigitte Agarwal,F,26,1,0,1,1,1,0,4,1,1,0,1,1,1,5,1,0,1,1,1,1,5,1,0,1,1,1,1,5
+Kevin,Bonne Sante,Maeva,311,Mason Sato,M,25,1,1,1,1,1,0,5,1,1,1,0,0,1,4,1,1,1,1,1,1,6,0,0,1,1,1,0,3
+Kevin,Bonne Sante,Mahuti,283,Pahal Dhar,M,24,0,1,1,1,1,1,5,1,1,1,1,1,0,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Colmar,2000,Josef Walther,M,22,1,0,1,1,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Colmar,2194,Raphael Lund,M,25,1,0,1,1,0,1,4,0,1,1,0,1,1,4,1,1,1,0,0,1,4,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Kinsale,409,Samuel Singh,M,24,1,1,0,1,1,0,4,1,0,1,0,1,1,4,1,1,1,1,1,1,6,0,1,1,0,0,0,2
+Kevin,Bonne Sante,Colmar,1490,Lucie Blomgren,F,28,1,1,1,1,1,0,5,1,1,1,1,1,1,6,1,1,1,1,0,1,5,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Mahuti,858,Devak Patel,M,23,1,1,1,1,1,1,6,0,1,1,1,1,1,5,1,1,1,1,1,0,5,1,0,1,1,1,1,5
+Kevin,Bonne Sante,Maeva,335,Amelie Jackson,F,23,1,0,1,0,1,1,4,1,1,1,1,1,1,6,1,1,1,1,1,1,6,0,0,0,1,1,1,3
+Kevin,Bonne Sante,Maeva,159,Oceane Mangal,F,24,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,0,5
+Kevin,Bonne Sante,Maeva,465,Erla Sorensen,F,23,0,1,1,1,1,1,5,0,1,1,0,1,1,4,0,1,1,1,1,1,5,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Riroua,443,Pari Karmarkar,F,21,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Maeva,324,Alexia Dupont,F,22,1,1,1,1,1,1,6,1,1,0,1,1,1,5,1,1,1,1,1,1,6,1,1,1,1,1,1,6
+Kevin,Bonne Sante,Colmar,1754,Annette Collins,F,25,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,0,5
+Kevin,Bonne Sante,Colmar,1603,Ren Moore,M,29,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,1,1,1,6,1,1,1,0,1,1,5
+Kevin,Bonne Sante,Colmar,422,Gyan Laha,M,27,1,0,1,0,1,1,4,0,1,1,1,1,1,5,1,0,1,1,0,1,4,1,0,1,0,1,1,4

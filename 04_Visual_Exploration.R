@@ -1,5 +1,4 @@
 library(tidyverse)
-library(googlesheets4)
 set_theme(theme_bw(base_size = 16, base_family = "Barlow"))
 
 
@@ -30,7 +29,7 @@ add_clean_treatment <- function(X) {
     )
 }
 
-raw_file <- read_sheet("1ZgRN1rhLDxdqz7HC7zoD6mphQ61XnV881gx_QjguWys")
+raw_file <- read_csv("10_Raw_Data.csv")
 
 dat <- raw_file |>
   select(NAME, SEX, starts_with("TOTAL_"))
@@ -66,7 +65,7 @@ Distribution_of_Scores <- dat_long |>
   ggplot() +
   aes(x = SCORE) +
   geom_density(fill = "#ffea88") +
-  geom_dotplot(binwidth = .3, dotsize = .3) +
+  geom_dotplot(binwidth = .3, dotsize = .27) +
   facet_wrap(~CLEAN_TREATMENT, ncol = 1) +
   scale_x_continuous(
     limits = c(0, 6),
@@ -76,9 +75,29 @@ Distribution_of_Scores <- dat_long |>
   scale_y_continuous(labels = NULL) +
   theme(
     axis.ticks.y = element_blank(),
-    strip.background = element_rect(fill = "#b2e3ff")
+    strip.background = element_rect(fill = "#b2e3ff"),
+    plot.title = element_text(hjust = .5)
   ) +
   labs(y = NULL, x = "Score", title = "Distribution of Scores") +
+  ggview::canvas(width = 6, height = 10)
+
+Differences_from_Control <- dat_diff_long |>
+  ggplot() +
+  aes(x = DIFFERENCE) +
+  geom_density(fill = "#ffea88") +
+  geom_dotplot(binwidth = .3, dotsize = .27) +
+  facet_wrap(~CLEAN_TREATMENT, ncol = 1) +
+  scale_y_continuous(labels = NULL) +
+  theme(
+    axis.ticks.y = element_blank(),
+    strip.background = element_rect(fill = "#b2e3ff"),
+    plot.title = element_text(hjust = .5)
+  ) +
+  labs(
+    y = NULL,
+    x = "Differences from Control",
+    title = "Distribution of Paired Differences"
+  ) +
   ggview::canvas(width = 6, height = 10)
 
 Individual_Scores_Across_Treatments <- dat_long |>
@@ -88,25 +107,6 @@ Individual_Scores_Across_Treatments <- dat_long |>
   geom_line() +
   facet_wrap(~NAME) +
   theme(legend.position = "none")
-
-Differences_from_Control <- dat_diff_long |>
-  ggplot() +
-  aes(x = DIFFERENCE) +
-  geom_density(fill = "#ffea88") +
-  geom_dotplot(binwidth = .3, dotsize = .3) +
-  facet_wrap(~CLEAN_TREATMENT, ncol = 1) +
-  scale_y_continuous(labels = NULL) +
-  theme(
-    axis.ticks.y = element_blank(),
-    strip.background = element_rect(fill = "#b2e3ff")
-  ) +
-  labs(
-    y = NULL,
-    x = "Differences from Control",
-    title = "Distribution of Differences"
-  ) +
-  ggview::canvas(width = 6, height = 6)
-
 
 Interaction_Plot <- dat_long |>
   summarize(m_SCORE = mean(SCORE), .by = c(SEX, CLEAN_TREATMENT)) |>
@@ -120,21 +120,13 @@ Interaction_Plot <- dat_long |>
   ggrepel::geom_text_repel(
     aes(label = SEX_LABEL),
     size = 8,
-    nudge_x = .2,
+    nudge_x = .13,
+    nudge_y = .04,
     min.segment.length = Inf
   ) +
   guides(color = "none") +
-  labs(x = NULL, y = "Average Score", title = "Interaction Plot")
-
-
-# For Later ---------------------------------------------------------------
-
-aov(SCORE ~ TREATMENT + SEX + Error(NAME), data = dat_long) |>
-  summary()
-
-# Residuals Plots 
-reg_model <- lm(SCORE ~ TREATMENT + SEX + NAME, data = dat_long)
-
-par(mfrow = c(2, 2))
-plot(reg_model)
-
+  labs(
+    x = NULL,
+    y = "Average Score",
+    title = "Interaction Plot - Sex vs. Treatment"
+  )
