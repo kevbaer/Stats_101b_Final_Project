@@ -1,7 +1,6 @@
 library(tidyverse)
 set_theme(theme_bw(base_size = 16, base_family = "Barlow"))
 
-
 add_clean_treatment <- function(X) {
   X |>
     mutate(
@@ -27,21 +26,6 @@ add_clean_treatment <- function(X) {
         )
       )
     )
-}
-
-
-cvi_palettes = function(palette, n, type = c("discrete", "continuous")) {
-  # Function From Nicola Rennie
-  if (missing(n)) {
-    n = length(palette)
-  }
-  type = match.arg(type)
-  out = switch(
-    type,
-    continuous = grDevices::colorRampPalette(palette)(n),
-    discrete = palette[1:n]
-  )
-  structure(out, class = "palette")
 }
 
 raw_file <- read_csv("10_Raw_Data.csv")
@@ -76,6 +60,20 @@ dat_diff_long <- dat |>
 
 # Plotting ----------------------------------------------------------------
 library(paletteer)
+
+cvi_palettes = function(palette, n, type = c("discrete", "continuous")) {
+  # Function From Nicola Rennie
+  if (missing(n)) {
+    n = length(palette)
+  }
+  type = match.arg(type)
+  out = switch(
+    type,
+    continuous = grDevices::colorRampPalette(palette)(n),
+    discrete = palette[1:n]
+  )
+  structure(out, class = "palette")
+}
 
 Distribution_of_Scores <- dat_long |>
   ggplot() +
