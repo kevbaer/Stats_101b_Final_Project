@@ -44,6 +44,13 @@ Tukey_Comparison_Plot <- emmeans(
   contrast(method = "trt.vs.ctrl") |>
   SimDesign::quiet() |>
   plot() +
+  aes(
+    y = fct_relevel(
+      contrast,
+      "Methamphetamine - Control",
+      "Double Caffeine - Control"
+    )
+  ) +
   theme_bw(base_size = 16, base_family = "Barlow") +
   scale_y_discrete(
     labels = ~ str_remove(.x, " - Control")
@@ -54,6 +61,6 @@ Tukey_Comparison_Plot <- emmeans(
     subtitle = "95% Confidence Interval",
     x = "Difference from Control"
   ) +
-  ggview::canvas(width = 8, height = 6) +
+  ggview::canvas(width = 10, height = 6) +
   theme(plot.title.position = "plot") +
   geom_vline(xintercept = 0, linetype = "dashed", color = "#b3114b")
