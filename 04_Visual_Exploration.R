@@ -29,6 +29,21 @@ add_clean_treatment <- function(X) {
     )
 }
 
+
+cvi_palettes = function(palette, n, type = c("discrete", "continuous")) {
+  # Function From Nicola Rennie
+  if (missing(n)) {
+    n = length(palette)
+  }
+  type = match.arg(type)
+  out = switch(
+    type,
+    continuous = grDevices::colorRampPalette(palette)(n),
+    discrete = palette[1:n]
+  )
+  structure(out, class = "palette")
+}
+
 raw_file <- read_csv("10_Raw_Data.csv")
 
 dat <- raw_file |>
@@ -60,6 +75,7 @@ dat_diff_long <- dat |>
 
 
 # Plotting ----------------------------------------------------------------
+library(paletteer)
 
 Distribution_of_Scores <- dat_long |>
   ggplot() +
@@ -101,12 +117,37 @@ Differences_from_Control <- dat_diff_long |>
   ggview::canvas(width = 6, height = 10)
 
 Individual_Scores_Across_Treatments <- dat_long |>
+  mutate(NAME = fct_reorder(NAME, SCORE, mean, .desc = TRUE)) |>
   ggplot() +
   aes(x = CLEAN_TREATMENT, y = SCORE, fill = NAME, color = NAME, group = NAME) +
   geom_point() +
   geom_line() +
-  facet_wrap(~NAME) +
-  theme(legend.position = "none")
+  facet_wrap(~NAME, nrow = 4) +
+  theme(
+    legend.position = "none",
+    strip.background = element_rect(fill = "#b2e3ff"),
+    strip.text = element_text(size = 8)
+  ) +
+  scale_x_discrete(
+    labels = c("C", "1", "2", "M")
+  ) +
+  labs(
+    x = "TREATMENT",
+    title = "Individual Scores",
+    subtitle = paste0(
+      "C : Control, 1 : Single Caffeine, ",
+      "2 : Double Caffeine, M : Methamphetamine"
+    ),
+  ) +
+  ggview::canvas(width = 10, height = 6) +
+  scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +
+  scale_color_manual(
+    values = cvi_palettes(
+      paletteer_d("poisonfrogs::Oskoi")[2:4],
+      34,
+      type = "continuous"
+    )
+  )
 
 Interaction_Plot <- dat_long |>
   summarize(m_SCORE = mean(SCORE), .by = c(SEX, CLEAN_TREATMENT)) |>
