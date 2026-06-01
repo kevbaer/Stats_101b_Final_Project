@@ -11,3 +11,12 @@ Anova_Interaction <- aov(
   style_tt(2, 1:7, line = "b", line_width = .1, line_color = "grey40")
 
 reg_model <- lm(SCORE ~ TREATMENT + SEX + NAME, data = dat_long)
+
+#TukeyHSD------------------
+# Collapse gender since it is not significant
+tukey_model <- aov(
+  SCORE ~ TREATMENT, data= dat_long
+)
+
+tukey<-TukeyHSD(tukey_model, "TREATMENT")
+tukey
