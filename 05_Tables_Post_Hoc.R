@@ -1,7 +1,7 @@
 library(tinytable)
 
 Anova_Interaction <- aov(
-  SCORE ~ TREATMENT * SEX + Error(NAME),
+  SCORE ~ TREATMENT * SEX + Error(NAME / TREATMENT),
   data = dat_long
 ) |>
   broom::tidy() |>
@@ -17,7 +17,7 @@ reg_model <- lm(SCORE ~ TREATMENT + SEX + NAME, data = dat_long)
 library(emmeans)
 
 tukey_model <- aov(
-  SCORE ~ CLEAN_TREATMENT + Error(NAME),
+  SCORE ~ CLEAN_TREATMENT + Error(NAME / TREATMENT),
   data = dat_long
 )
 
