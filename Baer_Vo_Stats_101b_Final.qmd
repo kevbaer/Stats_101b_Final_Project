@@ -8,7 +8,7 @@ editor: visual
 toc: true
 ---
 
-------
+------------------------------------------------------------------------
 
 Note: All code is accessible at [github.com/kevbaer/Stats_101b_Final_Project](https://github.com/kevbaer/Stats_101b_Final_Project) for following along!
 
@@ -16,23 +16,25 @@ Note: All code is accessible at [github.com/kevbaer/Stats_101b_Final_Project](ht
 
 # 1. Introduction
 
-The professional chess governing body has a list of banned substances which includes certain “cognitive-enhancing drugs” and other stimulants, including Methamphetamine, but not caffeine. Through clinical trials, Franke et al. (2017) observed that there is an effect of cognitive-enhancing drugs on chess ability, but not on in-match performance due to issues of playing quickly enough, with caffeine showing no significant performance benefit within their study.  Cappelletti et al. (2017) have noted that caffeine is known to increase perception of alertness and can induce anxiety at higher doses
+When I (Kevin) was growing up, I would play in chess tournaments and often see middle and high schoolers taking caffeine pills before games. I always wondered why they did this, and whether there was any advantage to be gained by doing so.
 
-In order to address these findings within a controlled environment, this experiment uses a repeated measures design to effectively evaluate whether distinct dosages of cognitive enhancers affect chess performance scores of each participant. Whether a player’s biological sex or an interaction between treatment and sex plays a role in the outcome of chess performance is what will be experimented with for this design philosophy.
+The professional chess governing body has a list of banned substances which includes certain “cognitive-enhancing drugs” and other stimulants, including Methamphetamine, but not caffeine. Through clinical trials, Franke et al. (2017) observed that there is an effect of cognitive-enhancing drugs on chess ability, but not on in-match performance due to issues of playing quickly enough, with caffeine showing no significant performance benefit within their study. Cappelletti et al. (2017) have noted that caffeine is known to increase perception of alertness and can induce anxiety at higher doses.
+
+In this paper, we seek to evaluate whether cognitive-enhancing drugs affect chess performance scores. We will also consider their biological sex for any interaction or impact as well.
+
+The following research all takes place using "The Islands" simulator. This is an online environment that enables eager participants and quick data collection, but also some issues when comparing to the real world, as we'll cover later.
 
 # 2. Methods
 
-The research was restricted to young adults aged 21-29 located on Bonne Sante Island. To maintain the data as randomly selected and unbiased as possible, households and participants were selected through a random sampling generator. Sampling through a series of cities prevents any uneven baseline populations across the Island. The final sample consisted of the first 34 eligible individuals who provided consent for the experiment. The experiment group maintained a balance across biological sex to support the integrity of the experiment.
+Firstly, our study need participants. We used the first 34 eligible individuals who provided consent for the experiment. All participants were residents of Bonne Sante Island and ages 21-29. Therefore, our population of study is "residents of the online island of Bonne Sante aged 21-29". They were chosen using a random selector of all households on Bonne Sante. This was done to prevent bias by oversampling small cities on the island. Our sample gave us a good balance of sex to use as a possible interaction.
 
-The experiment’s design was conducted as a two-factor repeated measures design, which allowed all 34 players to go through all four treatment groups, resulting in 136 treatment blocks and 816 total chess games. The structure of the experiment is defined as follows: 
+We had four unique treatments that we wanted to study. The first is a control, where no cognitive-enhancing drug is given to the participants before their chess games. The second treatment is a single caffeine tablet (100 mg). We also tested a double dose of caffeine (200 mg) to see whether more caffeine amplified the effect. Finally, we also tested methamphetamine (10 mg) as a treatment.
 
-1.  Response Variable: Building off of this experiment, since chess performance is a key piece to analyze the effects of each treatment condition, the player’s performance in a chess game was recorded as the response variable. The score follows a standard rule: a loss yielded 0 points, a draw yielded 0.5 points, and a win yielded 1 point, establishing a maximum possible value of 6 points in the span of 6 games for each participant.Participants start off with playing chess on the white side and then transitioning to the black side after. 
+Due to domain understanding, we suspected that the within-subject variability was going to be substantially left than the between-subject variability. This is because (at least in the real world), chess playing skills vary vastly among humans. We discuss later whether this belief held true on the island. But since we believed this to be true, we opted for an experimental design that would allow for effective analysis in these circumstances: two-factor repeated measures. Our first factor (treatment) would go to all 34 participants. Each participant would be tested on each treatment. We also had a second factor (sex) which would allow for investigation of imapct or interaction on chess scores.
 
-2.  Factor 1: Consisted of four treatment groups: Control, single caffeine tablet (100 mg), double caffeine tablet (200 mg), and methamphetamine injection (10 mg). 
+Our response variable was the score of the subject over six chess games (three white, three black), after taking the prescribed treatment. A win was given 1 point, a draw was given $\frac 1 2$ points, and a loss was given 0 points. This means that each of the 34 players played $4 * 6 = 24$ chess games, for a total of 816 game results collected.
 
-3.  Factor 2: Categorized the biological sex as Male (M) or Female (F). 
-
-4.  The factor diagram for the experiment is as follows:
+The factor diagram is shown below:
 
 ![Factor Diagram](98_Finished_Plots/Factor_Diagram.png){fig-align="center" width="600"}
 
@@ -44,52 +46,67 @@ The experiment relied on effective administration to execute procedures and cata
 
 -   Sample size was determined G\*Power. Inferential analysis, models of analysis for repeated measures, Tukey HSD, and residual plotting were all computed using R.
 
-Procedures:
+Procedures: Here were the steps taken, for reproduction and replication.
 
-1.   Determine the required sample size with the desired power and effect size. The goal was to have a power of 0.85, an effect size of 0.25, and a significance level of 0.05. Using G\*Power and the predetermined parameters, a sample size of 24 was obtained with the trust statistical power elevated to 0.94. This minimizes the probability of committing a Type II error. However, since there were 4 treatments conducted on 6 games for 2 groups, a sample size of 34 turned out to be more effective and balanced with 6 replications per treatment condition.
+1.  Determine the required sample size for a given desired power and effect size. The goal was to have a power of 0.8, an effect size of 0.25, and a significance level of 0.05. Using GPower and the predetermined parameters, a sample size of 24 proved sufficient. However, since there were 4 treatments conducted on 6 games for 2 groups, a sample size of 34 turned out to be more effective and balanced with 6 replications per treatment condition. This gave us a power of 0.94.
 
 ![GPower Output](98_Finished_Plots/GPower.png){fig-align="center" width="600"}
 
-2.  Design a generator that randomizes and generates a list of houses. The first 34 houses that met the age criteria (21-29), with approval of consent, were added to the study.
+2.  Design a function that randomizes and generates a list of houses. The first 34 houses that met the age criteria (21-29), with approval of consent, were added to the study.
 3.  Over four consecutive days, participants were exposed to one of the four treatment levels daily to mitigate sequence and learning effects.
-4.  Upon receiving a stimulant or injection, participants had to wait 1 hour before proceeding with the experiment before engaging in the next chess match.
-5.  Start with chess on white side and record their performance based on win, loss, or draw score. Transition to the black side for the next game. This results in a total of 3 white and 3 black games back-to-back for each participant.
-6.  Record the results for each game and each participant.
-7.   Maintain the process for 4 days total. Each day should administer a different treatment group until all participants have cycled through all levels of the treatment groups.
+4.  Upon receiving a stimulant or injection, participants had to wait 1 hour before moving on to the next step.
+5.  Start with chess on white side and record their performance, either win, loss, or draw. Transition to the black side for the next game. Repeat three times. This results in a total of 3 white and 3 black games played sequentially for each participant.
+6.  Maintain the process for 4 days total. Each day should administer a different treatment group until all participants have cycled through all levels of the treatment groups.
 
 # 3. Data Analysis and Results
 
+After collecting all the required data, we turned our attention to exploring and analyzing the results. The first thing we checked was whether our assumption of the high between-subject variability held true.
+
 ![Individual Scores](98_Finished_Plots/Individual_Scores.png){fig-align="center" width="600"}
 
-The above figure showcases all 34 of the individual scores starting with Treatment as the x-axis and Total Scores of each treatment as the y-axis. By analyzing each participant’s scores and how it trajects as they consume different treatment groups over four consecutive days, the visual interpretation of each plot reveals characteristics of the data obtained. An effective amount of participants found to have an upwards slope when transitioning to the next treatment group. 
-
-For some participants, shifting from caffeine levels to methamphetamine injection triggers an immediate downward trend.
+As we can see from the above figure, participants had roughly the same scores across the different treatments, but different greatly from other participants. This matched our expectation and proved that the repeated-measures was an excellent design choice for this project.
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | ![Distribution of Scores](98_Finished_Plots/Distro_Scores.png){fig-align="center" width="300"} | ![Distribution of Paired Differences](98_Finished_Plots/Distro_Differences.png){fig-align="center" width="300"} |
 
-The left plot reveals that the pattern between each treatment group hold an identical distribution. Points begin to cluster around 4 point with an increase in point density beyond that point. Control and Methamphetamine closely resemble a balanced shape as it appears that the shape begins to dip or maintain balance. Single Caffeine shows a slightly left-skewed pattern. Double Caffeine, however, displays a highly left-skewed plot, indicating an upward shift in performance.
+Next, we looked at the distribution of scores and paired differences for each treatment.
 
-The right figure highlights the differences from control for each stimulant tested. Single Caffeine and Methamphetamine's distribution appear tightly centered around 0, indicating that these treatments did not produce an effective change from Control for the majority of the participants. Double Caffeine, on the other hand, displays a shift towards the right, outlining that there is a positive increase when individuals transition from Control to Double Caffeine.
+In the left figure, we are looking for substantial difference between the Control distribution and the other distributions. It's difficult to see in the left-hand figure how drastic these differences are, although it appears clear that Methamphetamine is not distinct from Control, and Double Caffeine has the best distribution of scores.
 
-![Interaction Plot between Treatment and Sex](98_Finished_Plots/Interaction.png){fig-align="center" width="600"}
+The right figure highlights the differences from control to each stimulant tested per participant. Now we are looking for a roughly central distribution. Single Caffeine and Methamphetamine's distribution appear tightly centered around 0, indicating that these treatments did not produce an effective change from Control for the majority of the participants. Double Caffeine, on the other hand, displays a shift towards the right, showing that there is a positive increase when individuals transition from Control to Double Caffeine.
 
-The interaction plot shows that the response lines for male (M) and female (F) are somewhat parallel. However, it does not show a clear interaction between the two, indicating that there’s not enough evidence that treatment differs by sex.
+![Interaction Plot between Treatment and Sex](98_Finished_Plots/Interaction.png){fig-align="center" width="500"}
+
+When checking the interaction plot, we see that the response lines for male (M) and female (F) are somewhat parallel. There is some effect size differences, but there's no overlap, and everything is directionaly similar. We will do some more statistically rigorous investigation, but it appears that there isn't significant interaction between the Sex and Treatment factors.
 
 ![ANOVA Table](98_Finished_Plots/Anova_Interaction.png){fig-align="center" width="600"}
 
-The null hypothesis of the study states that the chess score is the same across all treatment conditions, while the alternative hypothesis states that at least one treatment differs Overall, the $R^2$ found was 0.62. By analyzing the ANOVA, TREATMENT is the only factor with a p-value less than alpha (0.05), therefore rejecting the null and confirming that not all treatments are equal to control.
+Now it's time to look at our ANOVA results. By running this two-factor repeated measures ANOVA, we can investigate the following null hypotheses:
+
+1.  The chess scores are the same for both Males and Females (ages 21-29, Bonne Sante Island).
+2.  The chess scores are the same for all treatments (control, single caffeine, double caffeine, methamphetamine) (ages 21-29, Bonne Sante Island).
+3.  The sex and treatment have no interaction on chess scores (ages 21-29, Bonne Sante Island).
+
+From the above table, we can see the p-values for each of these three null hypotheses. Only one is less than our chosen alpha (0.05), and so we fail to reject null hypotheses 1 and 3.
+
+However, we do have enough evidence from this study to reject the null hypothesis and accept that chess scores do differ across these four treatments for the study population.
+
+Note that this model gives an $R^2$ found of 0.62. This suggests our model is explaining much of the variability in chess performance scores.
+
+One drawback to this ANOVA method is that i doesn't tell us which (if any/many) of these four treatments differ from each other. Therefore, our next step is going to be post-hoc analysis.
 
 ![Tukey Post-Hoc Analysis](98_Finished_Plots/Tukey_Table.png){fig-align="center" width="600"}
 
-Since it was found that not all treatments are equal to control, the Post-Hoc analysis was to demonstrate that the contrast between Double Caffeine and. Control are statistically significant at p = 0.0204. With an average increase of +0.588 points over the control and a 95% confidence interval of (0.032, 1.144), Double Caffeine significantly differs from Control. Therefore, Double Caffeine improves chess performance in this population.
+Since it was found that not all treatments are equal to control, the Post-Hoc analysis allows us to identify which treatments differ. From the figure above we see that only Double Caffeine differs from Control at our alpha (0.05). With an average increase of +0.588 points over the control and a 95% confidence interval of (0.032, 1.144) which doesn't include 0, Double Caffeine significantly differs from Control in the positive direction. Therefore, Double Caffeine improves chess performance in this population.
 
 ![Tukey Post-Hoc Visualization of Differences](98_Finished_Plots/Tukey_Plot.png){fig-align="center" width="600"}
 
+We can also see this visualized for us in the figure above. We see that the Single Caffeine difference from control contains 0, as does the Methamphetamine. However, the double caffeine confidence interval doesn't contain 0. Note that the confidence interval for Double Caffeine contains both of the point estimate for the other two groups, indicating that they are likely not significantly different.
+
 ![Residual Plot](98_Finished_Plots/Residuals.png){fig-align="center" width="600"}
 
-The Residuals vs Fitted plot shows that the plots are decently spread across the plot, confirming homoscedasticity. The Q-Q Residuals plot shows that the residuals are moved tightly along a pattern, confirming that they are normally distributed. The Constant Leverage plot shows that there is a downward slope starting from left to right, suggesting that residual variance decreases as fitted values increase. The Constant Leverage plot shows that the residual spread looks reasonably consistent across all groups.
+Visual inspection of the residuals is necessary to feel confident about our ANOVA and post-hoc analysis. We have a great Residuals vs Fitted plot that looks very flat. This suggests we have homoscedasticity. The Q-Q plot follows the line quite well, suggesting our residuals are normally distributed. The scale-location plot looks a little iffy, as the spread of the residuals decreases as our fitted values increase. However, we believe this to be an artifact of the consistent, high performance of several Islanders. Our constant leverage plot shows a good spread of residuals across different factors.
 
 # 4. Conclusion
 
@@ -119,7 +136,7 @@ Malík, M., & Tlustoš, P. – Nootropics as Cognitive Enhancers: Types, Dosage 
 
 Mihailov, E., & Savulescu, J. - Social Policy and Cognitive Enhancement: Lessons from Chess. - Neuroethics 11, 115–127 (2018) - <https://doi.org/10.1007/s12152-018-9354-y>
 
----
+------------------------------------------------------------------------
 
 Arel-Bundock V (2026). *tinytable: Simple and Configurable Tables in 'HTML', 'LaTeX', 'Markdown', 'Word', 'PNG', 'PDF', and 'Typst' Formats*. doi:10.32614/CRAN.package.tinytable <https://doi.org/10.32614/CRAN.package.tinytable>, R package version 0.16.0, <https://CRAN.R-project.org/package=tinytable>.
 
